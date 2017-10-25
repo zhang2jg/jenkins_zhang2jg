@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker 'python:2.7' }
+    agent any
     stages {
         stage('build') {
             steps {
-                sh 'python --version'
+                sh 'python --version > /predix/Jenkins/temp/123.txt'
             }
         }
     }
