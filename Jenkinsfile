@@ -1,10 +1,15 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('request token') {
             steps {
-                sh 'python --version > /predix/Jenkins/temp/123.txt'
+                sh 'python request_predix_token.py'
             }
         }
+        stage('query analytics catalog') {
+                    steps {
+                        sh 'python query_analytics_catalog.py'
+                    }
+                }
     }
 }
