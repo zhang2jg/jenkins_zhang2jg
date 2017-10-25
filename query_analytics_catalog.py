@@ -19,8 +19,9 @@ def main(uri, predix_zone_id, predix_token):
 
 
 if __name__ == '__main__':
+    # TODO set username and password as environment variables in Jenkins environment
     predix_analytics_uri = r'https://predix-analytics-catalog-release.run.aws-usw02-pr.ice.predix.io/api/v1/catalog/analytics'
-    predix_zone_id = r'2042c53a-2ec1-4548-8695-a5a0aecbda84'
+    predix_zone_id = r''
     with open('predix_token.txt', 'r') as f:
         predix_token = f.read()
     print main(predix_analytics_uri, predix_zone_id, predix_token)

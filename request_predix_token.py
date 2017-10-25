@@ -21,7 +21,8 @@ def main(username, password, uaa_issuerID):
 
 
 if __name__ == '__main__':
+    # TODO set username and password as environment variables in Jenkins environment
     username = "jing_uaa_1"
-    password = "A123"
-    uaa_issuerID = r'https://7b70b04a-4402-4bdc-8fda-1ca7c6d94d25.predix-uaa.run.aws-usw02-pr.ice.predix.io/oauth/token'
+    password = ""
+    uaa_issuerID = r''
     print main(username, password, uaa_issuerID)
